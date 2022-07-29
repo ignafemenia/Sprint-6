@@ -1,2 +1,601 @@
-<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:\Users\RobertoNicolásSavine\Documents\GitHub\itbank\db\itbank.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="2429"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,15:mainmarcas_tarjetas"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="cliente" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="88"/><column index="2" value="112"/><column index="3" value="133"/><column index="4" value="99"/><column index="5" value="73"/><column index="6" value="72"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="empleado" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="4" mode="1"/></sort><column_widths><column index="1" value="89"/><column index="2" value="113"/><column index="3" value="134"/><column index="4" value="141"/><column index="6" value="72"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="marcas_tarjetas" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="40"/><column index="2" value="57"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="tarjetas" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="57"/><column index="2" value="40"/><column index="3" value="140"/><column index="4" value="118"/><column index="5" value="52"/><column index="6" value="88"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="tipo_cliente" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="103"/><column index="2" value="127"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="tipo_cuenta" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="40"/><column index="2" value="43"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="tipo_tarjeta" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="52"/><column index="2" value="76"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">select * from cliente
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/Ignacio/Desktop/ITBA/Sprint-6/db/itbank.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="2987"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,6:maincuenta"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="cliente" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="88"/><column index="2" value="112"/><column index="3" value="133"/><column index="4" value="99"/><column index="5" value="73"/><column index="6" value="72"/><column index="7" value="85"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="cuenta" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="79"/><column index="2" value="88"/><column index="3" value="61"/><column index="4" value="233"/><column index="5" value="105"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="direccion" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="1" mode="0"/></sort><column_widths><column index="1" value="136"/><column index="2" value="40"/><column index="3" value="57"/><column index="4" value="50"/><column index="5" value="67"/><column index="6" value="88"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;201-2586 Velit. Rd.&quot;,&quot;Saratov Oblast&quot;,&quot;Nigeria&quot;,5,&quot;Mokpo&quot;),
+  (&quot;Ap #653-2144 Vitae Avenue&quot;,&quot;Vaupés&quot;,&quot;Belgium&quot;,7,&quot;Serangoon&quot;),
+  (&quot;155-3998 Aliquet Rd.&quot;,&quot;Basilicata&quot;,&quot;Norway&quot;,1,&quot;Stockerau&quot;),
+  (&quot;Ap #396-5029 Cursus Rd.&quot;,&quot;Leinster&quot;,&quot;Chile&quot;,1,&quot;Gansu&quot;),
+  (&quot;P.O. Box 503, 4412 Volutpat Street&quot;,&quot;Gilgit Baltistan&quot;,&quot;Netherlands&quot;,7,&quot;Marina South&quot;),
+  (&quot;994-6914 Quisque Avenue&quot;,&quot;Diyarbakır&quot;,&quot;France&quot;,6,&quot;Chongqing&quot;),
+  (&quot;Ap #272-1244 Risus St.&quot;,&quot;Basse-Normandie&quot;,&quot;United Kingdom&quot;,2,&quot;Padang Panjang&quot;),
+  (&quot;Ap #810-669 Mattis St.&quot;,&quot;North Gyeongsang&quot;,&quot;Chile&quot;,1,&quot;Cañas&quot;),
+  (&quot;356-1694 Nascetur Rd.&quot;,&quot;Northern Cape&quot;,&quot;Norway&quot;,7,&quot;Barranca&quot;),
+  (&quot;P.O. Box 974, 3499 Erat Rd.&quot;,&quot;Northern Territory&quot;,&quot;Philippines&quot;,8,&quot;Montague&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;Ap #396-5834 Eros Road&quot;,&quot;Vinnytsia oblast&quot;,&quot;New Zealand&quot;,9,&quot;Vĩnh Long&quot;),
+  (&quot;743-9097 Sit Street&quot;,&quot;Connacht&quot;,&quot;Turkey&quot;,1,&quot;Novo Hamburgo&quot;),
+  (&quot;P.O. Box 872, 4018 Amet Rd.&quot;,&quot;Galicia&quot;,&quot;Netherlands&quot;,4,&quot;Manisa&quot;),
+  (&quot;P.O. Box 104, 7600 Enim Av.&quot;,&quot;Saskatchewan&quot;,&quot;Chile&quot;,2,&quot;Awaran&quot;),
+  (&quot;8698 Tempor Rd.&quot;,&quot;Aragón&quot;,&quot;Belgium&quot;,3,&quot;Yellowhead County&quot;),
+  (&quot;Ap #906-8733 Vitae Rd.&quot;,&quot;Northern Mindanao&quot;,&quot;Sweden&quot;,6,&quot;Veere&quot;),
+  (&quot;9590 Dis Street&quot;,&quot;Himachal Pradesh&quot;,&quot;Ukraine&quot;,4,&quot;Istanbul&quot;),
+  (&quot;818-2589 Commodo Street&quot;,&quot;Agder&quot;,&quot;Austria&quot;,2,&quot;Stirling&quot;),
+  (&quot;Ap #947-7351 At Avenue&quot;,&quot;Gyeonggi&quot;,&quot;Vietnam&quot;,5,&quot;Mahikeng&quot;),
+  (&quot;314-4099 Parturient St.&quot;,&quot;Zeeland&quot;,&quot;Brazil&quot;,7,&quot;Borlänge&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;7458 Purus Ave&quot;,&quot;Ontario&quot;,&quot;Turkey&quot;,4,&quot;Saint John&quot;),
+  (&quot;652-604 Tristique Ave&quot;,&quot;Goiás&quot;,&quot;Canada&quot;,0,&quot;Kırıkhan&quot;),
+  (&quot;9799 Porttitor Rd.&quot;,&quot;Extremadura&quot;,&quot;France&quot;,2,&quot;Trà Vinh&quot;),
+  (&quot;Ap #776-1445 Phasellus Street&quot;,&quot;Alsace&quot;,&quot;Vietnam&quot;,4,&quot;San Francisco&quot;),
+  (&quot;P.O. Box 381, 6079 Velit Ave&quot;,&quot;North Region&quot;,&quot;Poland&quot;,0,&quot;Assen&quot;),
+  (&quot;9688 Elementum, Street&quot;,&quot;Bremen&quot;,&quot;Spain&quot;,8,&quot;Pforzheim&quot;),
+  (&quot;Ap #183-1221 Sed, Avenue&quot;,&quot;Central Luzon&quot;,&quot;Colombia&quot;,10,&quot;Kursk&quot;),
+  (&quot;Ap #719-2750 Tortor. Avenue&quot;,&quot;Huádōng&quot;,&quot;India&quot;,6,&quot;Santander&quot;),
+  (&quot;P.O. Box 446, 3367 Leo. Rd.&quot;,&quot;Jönköpings län&quot;,&quot;Philippines&quot;,2,&quot;Tabuk&quot;),
+  (&quot;225-7065 Elementum Road&quot;,&quot;Louisiana&quot;,&quot;Indonesia&quot;,1,&quot;Juliaca&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;820-4397 Libero. Avenue&quot;,&quot;North West&quot;,&quot;Belgium&quot;,8,&quot;Icheon&quot;),
+  (&quot;976-6076 Orci. Av.&quot;,&quot;Vienna&quot;,&quot;South Korea&quot;,6,&quot;Santa Maria&quot;),
+  (&quot;P.O. Box 404, 8517 Duis Rd.&quot;,&quot;Bremen&quot;,&quot;New Zealand&quot;,3,&quot;Hà Tĩnh&quot;),
+  (&quot;1330 Nulla Ave&quot;,&quot;Punjab&quot;,&quot;Costa Rica&quot;,4,&quot;Arica&quot;),
+  (&quot;8286 Proin St.&quot;,&quot;East Region&quot;,&quot;Mexico&quot;,4,&quot;Straits View&quot;),
+  (&quot;P.O. Box 349, 4715 Eu, Road&quot;,&quot;Victoria&quot;,&quot;Austria&quot;,10,&quot;Shigar&quot;),
+  (&quot;838-2564 Elit, Road&quot;,&quot;Munster&quot;,&quot;Turkey&quot;,10,&quot;Borlänge&quot;),
+  (&quot;P.O. Box 144, 2663 Neque. Rd.&quot;,&quot;Sachsen&quot;,&quot;Singapore&quot;,1,&quot;Gore&quot;),
+  (&quot;Ap #421-149 Sed St.&quot;,&quot;Sachsen&quot;,&quot;Turkey&quot;,3,&quot;Orkanger&quot;),
+  (&quot;Ap #146-521 Metus Av.&quot;,&quot;Vichada&quot;,&quot;Ukraine&quot;,1,&quot;Belfast&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;697-542 Risus, Ave&quot;,&quot;Connacht&quot;,&quot;New Zealand&quot;,5,&quot;Quesada&quot;),
+  (&quot;635-1404 Felis, Avenue&quot;,&quot;Maluku&quot;,&quot;Belgium&quot;,6,&quot;Mexico City&quot;),
+  (&quot;P.O. Box 856, 5257 Euismod Rd.&quot;,&quot;Castilla - La Mancha&quot;,&quot;Pakistan&quot;,7,&quot;Gifhorn&quot;),
+  (&quot;1293 Donec Road&quot;,&quot;Pomorskie&quot;,&quot;Spain&quot;,3,&quot;North Waziristan&quot;),
+  (&quot;164-1733 Adipiscing St.&quot;,&quot;South Island&quot;,&quot;United States&quot;,10,&quot;Jacksonville&quot;),
+  (&quot;9371 Vulputate St.&quot;,&quot;Swiętokrzyskie&quot;,&quot;Austria&quot;,1,&quot;Uppingham. Cottesmore&quot;),
+  (&quot;Ap #608-8310 Cursus Rd.&quot;,&quot;Northern Cape&quot;,&quot;Sweden&quot;,5,&quot;Tual&quot;),
+  (&quot;104 Congue, Ave&quot;,&quot;Bremen&quot;,&quot;Colombia&quot;,3,&quot;Kovel&quot;),
+  (&quot;951-1228 Pretium Road&quot;,&quot;Balıkesir&quot;,&quot;Russian Federation&quot;,7,&quot;College&quot;),
+  (&quot;P.O. Box 607, 4341 Aliquet. Rd.&quot;,&quot;Chernivtsi oblast&quot;,&quot;China&quot;,4,&quot;Armidale&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;475-4470 Rutrum Rd.&quot;,&quot;Munster&quot;,&quot;Peru&quot;,7,&quot;Jambi&quot;),
+  (&quot;567-2054 Suspendisse Ave&quot;,&quot;Lima&quot;,&quot;Colombia&quot;,3,&quot;Paillaco&quot;),
+  (&quot;686-9279 Lobortis Rd.&quot;,&quot;Maule&quot;,&quot;Italy&quot;,2,&quot;Heilongjiang&quot;),
+  (&quot;P.O. Box 476, 834 Integer St.&quot;,&quot;Campania&quot;,&quot;Russian Federation&quot;,0,&quot;San Fratello&quot;),
+  (&quot;698-7368 Est. Rd.&quot;,&quot;Schleswig-Holstein&quot;,&quot;Vietnam&quot;,8,&quot;Ferlach&quot;),
+  (&quot;617-1356 Tempus Rd.&quot;,&quot;Ceuta&quot;,&quot;South Korea&quot;,0,&quot;Caucaia&quot;),
+  (&quot;231 Faucibus St.&quot;,&quot;Prince Edward Island&quot;,&quot;Philippines&quot;,1,&quot;Mamuju&quot;),
+  (&quot;Ap #379-873 Egestas Street&quot;,&quot;Heredia&quot;,&quot;Peru&quot;,5,&quot;Portland&quot;),
+  (&quot;P.O. Box 398, 6783 Ridiculus Av.&quot;,&quot;Bayern&quot;,&quot;Peru&quot;,1,&quot;María Elena&quot;),
+  (&quot;9339 Risus. Rd.&quot;,&quot;North Jeolla&quot;,&quot;Austria&quot;,2,&quot;Wrocław&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;347-837 Iaculis Avenue&quot;,&quot;Benue&quot;,&quot;Nigeria&quot;,9,&quot;Dublin&quot;),
+  (&quot;Ap #727-7214 Vivamus St.&quot;,&quot;Gyeonggi&quot;,&quot;Netherlands&quot;,7,&quot;Bordeaux&quot;),
+  (&quot;775-7912 Enim Road&quot;,&quot;Lubelskie&quot;,&quot;South Korea&quot;,2,&quot;Kano&quot;),
+  (&quot;735-7514 Arcu Rd.&quot;,&quot;Castilla - La Mancha&quot;,&quot;Australia&quot;,4,&quot;Cardedu&quot;),
+  (&quot;Ap #540-7890 Tincidunt, Av.&quot;,&quot;Ulster&quot;,&quot;Philippines&quot;,6,&quot;Sukkur&quot;),
+  (&quot;665-6833 Gravida Avenue&quot;,&quot;Waals-Brabant&quot;,&quot;Philippines&quot;,4,&quot;Polino&quot;),
+  (&quot;836-4124 Lorem Rd.&quot;,&quot;Bắc Giang&quot;,&quot;China&quot;,7,&quot;Watermaal-Bosvoorde&quot;),
+  (&quot;Ap #319-4204 Nullam St.&quot;,&quot;Central Visayas&quot;,&quot;Netherlands&quot;,0,&quot;Goes&quot;),
+  (&quot;P.O. Box 816, 9745 Libero Avenue&quot;,&quot;Nordland&quot;,&quot;Norway&quot;,2,&quot;Elbistan&quot;),
+  (&quot;Ap #330-6566 Ligula St.&quot;,&quot;Friuli-Venezia Giulia&quot;,&quot;Ukraine&quot;,5,&quot;Iksan&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;415-924 Nulla Street&quot;,&quot;North Jeolla&quot;,&quot;Singapore&quot;,1,&quot;San Rafael&quot;),
+  (&quot;656 Lobortis. Avenue&quot;,&quot;Riau Islands&quot;,&quot;Austria&quot;,0,&quot;Almelo&quot;),
+  (&quot;365-2376 Tincidunt Road&quot;,&quot;Quebec&quot;,&quot;France&quot;,5,&quot;Geertruidenberg&quot;),
+  (&quot;P.O. Box 740, 2174 Aliquam Av.&quot;,&quot;Limousin&quot;,&quot;Australia&quot;,0,&quot;Oslo&quot;),
+  (&quot;P.O. Box 122, 1642 Tortor, Ave&quot;,&quot;Newfoundland and Labrador&quot;,&quot;South Korea&quot;,9,&quot;Mjölby&quot;),
+  (&quot;P.O. Box 816, 5486 Luctus Street&quot;,&quot;Møre og Romsdal&quot;,&quot;Belgium&quot;,4,&quot;Cork&quot;),
+  (&quot;6884 Quisque Rd.&quot;,&quot;Corse&quot;,&quot;France&quot;,10,&quot;Gravilias&quot;),
+  (&quot;Ap #315-5183 Metus. St.&quot;,&quot;Troms og Finnmark&quot;,&quot;Ukraine&quot;,8,&quot;Mukachevo&quot;),
+  (&quot;681-9615 Cras Street&quot;,&quot;Zhōngnán&quot;,&quot;Costa Rica&quot;,3,&quot;Terneuzen&quot;),
+  (&quot;Ap #228-9616 A Road&quot;,&quot;Rio Grande do Sul&quot;,&quot;Germany&quot;,3,&quot;Ockelbo&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;302-4243 Lacus, Rd.&quot;,&quot;Oslo&quot;,&quot;Spain&quot;,8,&quot;Heilongjiang&quot;),
+  (&quot;Ap #902-3030 Blandit Ave&quot;,&quot;Picardie&quot;,&quot;Turkey&quot;,4,&quot;Gore&quot;),
+  (&quot;875-8052 Duis Avenue&quot;,&quot;Niedersachsen&quot;,&quot;Colombia&quot;,3,&quot;Seogwipo&quot;),
+  (&quot;980-5372 Ultrices St.&quot;,&quot;FATA&quot;,&quot;South Africa&quot;,9,&quot;Xinjiang&quot;),
+  (&quot;317-5391 Orci. Street&quot;,&quot;Mpumalanga&quot;,&quot;Sweden&quot;,7,&quot;Belfast&quot;),
+  (&quot;784-9569 Nunc St.&quot;,&quot;Ternopil oblast&quot;,&quot;Colombia&quot;,3,&quot;Chervonohrad&quot;),
+  (&quot;335-242 Eget, Rd.&quot;,&quot;Maranhão&quot;,&quot;Pakistan&quot;,5,&quot;Lai Châu&quot;),
+  (&quot;348 Lectus Rd.&quot;,&quot;Limón&quot;,&quot;Singapore&quot;,4,&quot;Vienna&quot;),
+  (&quot;583-5286 Lacinia St.&quot;,&quot;Gangwon&quot;,&quot;Nigeria&quot;,6,&quot;Stonewall&quot;),
+  (&quot;905-4543 In St.&quot;,&quot;Piemonte&quot;,&quot;South Korea&quot;,9,&quot;Naperville&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;Ap #358-8433 Elit, Ave&quot;,&quot;Kaduna&quot;,&quot;New Zealand&quot;,9,&quot;Paulista&quot;),
+  (&quot;Ap #778-7851 Eget St.&quot;,&quot;Lampung&quot;,&quot;Netherlands&quot;,5,&quot;Staßfurt&quot;),
+  (&quot;916-3577 A, Rd.&quot;,&quot;Arunachal Pradesh&quot;,&quot;Spain&quot;,2,&quot;Mohmand Agency&quot;),
+  (&quot;P.O. Box 217, 5769 A Avenue&quot;,&quot;Gauteng&quot;,&quot;New Zealand&quot;,3,&quot;León&quot;),
+  (&quot;2756 Justo. Rd.&quot;,&quot;Nuevo León&quot;,&quot;India&quot;,9,&quot;Iquitos&quot;),
+  (&quot;Ap #155-9415 Ut, St.&quot;,&quot;Pará&quot;,&quot;China&quot;,2,&quot;Waterbury&quot;),
+  (&quot;3504 Phasellus Ave&quot;,&quot;Oslo&quot;,&quot;Belgium&quot;,9,&quot;Białystok&quot;),
+  (&quot;679-4848 Sed Ave&quot;,&quot;Bauchi&quot;,&quot;Russian Federation&quot;,3,&quot;Katsina&quot;),
+  (&quot;Ap #389-311 Dui Av.&quot;,&quot;Manitoba&quot;,&quot;Italy&quot;,8,&quot;Güstrow&quot;),
+  (&quot;P.O. Box 689, 5153 Massa. St.&quot;,&quot;Antalya&quot;,&quot;Pakistan&quot;,1,&quot;Lagos&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;433-3199 Donec Rd.&quot;,&quot;Jeju&quot;,&quot;Indonesia&quot;,8,&quot;Hofors&quot;),
+  (&quot;P.O. Box 537, 8642 Arcu. Avenue&quot;,&quot;Davao Region&quot;,&quot;Sweden&quot;,2,&quot;Sommethonne&quot;),
+  (&quot;P.O. Box 228, 2570 Ut Av.&quot;,&quot;Luik&quot;,&quot;Indonesia&quot;,0,&quot;Ashburton&quot;),
+  (&quot;Ap #947-1025 Pede St.&quot;,&quot;Northwest Territories&quot;,&quot;Chile&quot;,6,&quot;Río Claro&quot;),
+  (&quot;Ap #587-4950 Id Ave&quot;,&quot;Arunachal Pradesh&quot;,&quot;Philippines&quot;,10,&quot;Missoula&quot;),
+  (&quot;8187 Mus. Road&quot;,&quot;Cajamarca&quot;,&quot;Ukraine&quot;,7,&quot;Marchtrenk&quot;),
+  (&quot;569-2324 Et Road&quot;,&quot;Umbria&quot;,&quot;Poland&quot;,2,&quot;Puntarenas&quot;),
+  (&quot;Ap #575-1132 Nulla. Rd.&quot;,&quot;Oslo&quot;,&quot;Canada&quot;,0,&quot;Barranca&quot;),
+  (&quot;299-3681 At Av.&quot;,&quot;Liguria&quot;,&quot;Philippines&quot;,10,&quot;Kędzierzyn-Koźle&quot;),
+  (&quot;Ap #512-2633 Fusce Rd.&quot;,&quot;North Island&quot;,&quot;Ukraine&quot;,1,&quot;Brampton&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;P.O. Box 712, 6031 Porttitor Street&quot;,&quot;Kurgan Oblast&quot;,&quot;Chile&quot;,8,&quot;Madrid&quot;),
+  (&quot;7270 Nonummy Street&quot;,&quot;Anambra&quot;,&quot;Norway&quot;,6,&quot;Pamplona&quot;),
+  (&quot;P.O. Box 344, 852 Pede, St.&quot;,&quot;Oaxaca&quot;,&quot;Poland&quot;,2,&quot;Piotrków Trybunalski&quot;),
+  (&quot;P.O. Box 662, 2011 Cursus St.&quot;,&quot;Dalarnas län&quot;,&quot;Brazil&quot;,5,&quot;Khyber Agency&quot;),
+  (&quot;P.O. Box 175, 1424 Vehicula. St.&quot;,&quot;West Region&quot;,&quot;South Korea&quot;,2,&quot;Manokwari&quot;),
+  (&quot;574-2374 Rutrum. Road&quot;,&quot;Special Capital Region of Jakarta&quot;,&quot;Austria&quot;,4,&quot;Biała Podlaska&quot;),
+  (&quot;P.O. Box 288, 4109 Enim Road&quot;,&quot;Indiana&quot;,&quot;Norway&quot;,4,&quot;Valle del Guamuez&quot;),
+  (&quot;876-6368 Phasellus Ave&quot;,&quot;Melilla&quot;,&quot;Sweden&quot;,4,&quot;Ludwigsburg&quot;),
+  (&quot;Ap #660-8799 Malesuada Street&quot;,&quot;Atacama&quot;,&quot;Singapore&quot;,8,&quot;Langesund&quot;),
+  (&quot;Ap #444-1584 Odio. Rd.&quot;,&quot;Queensland&quot;,&quot;Norway&quot;,2,&quot;Jeju&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;9868 Non, Av.&quot;,&quot;Luhansk oblast&quot;,&quot;Sweden&quot;,4,&quot;Pskov&quot;),
+  (&quot;990-5613 A, Street&quot;,&quot;Gilgit Baltistan&quot;,&quot;Philippines&quot;,10,&quot;Edremit&quot;),
+  (&quot;680-6532 Ut Rd.&quot;,&quot;Anambra&quot;,&quot;Chile&quot;,8,&quot;Vottem&quot;),
+  (&quot;P.O. Box 488, 8585 Est, Street&quot;,&quot;Bursa&quot;,&quot;Belgium&quot;,2,&quot;Juliaca&quot;),
+  (&quot;752-3454 Mattis Street&quot;,&quot;Eastern Cape&quot;,&quot;Chile&quot;,4,&quot;Zittau&quot;),
+  (&quot;Ap #107-2392 Sem Rd.&quot;,&quot;Rivne oblast&quot;,&quot;Italy&quot;,4,&quot;Bạc Liêu&quot;),
+  (&quot;188-8571 Dolor Street&quot;,&quot;Osun&quot;,&quot;Philippines&quot;,4,&quot;Andong&quot;),
+  (&quot;Ap #837-9421 Velit Avenue&quot;,&quot;Cundinamarca&quot;,&quot;France&quot;,5,&quot;Paz de Ariporo&quot;),
+  (&quot;Ap #173-6253 Eget, Avenue&quot;,&quot;Luxemburg&quot;,&quot;Pakistan&quot;,1,&quot;Reims&quot;),
+  (&quot;Ap #145-3372 Vestibulum, St.&quot;,&quot;New Brunswick&quot;,&quot;France&quot;,4,&quot;Rotem&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;Ap #299-4271 Varius Road&quot;,&quot;West-Vlaanderen&quot;,&quot;France&quot;,2,&quot;Devonport&quot;),
+  (&quot;551-9949 Aliquet Rd.&quot;,&quot;North Island&quot;,&quot;Mexico&quot;,6,&quot;Lugo&quot;),
+  (&quot;Ap #651-6910 Tellus. St.&quot;,&quot;Sachsen-Anhalt&quot;,&quot;Ukraine&quot;,9,&quot;Vöcklabruck&quot;),
+  (&quot;7303 Est Street&quot;,&quot;Zuid Holland&quot;,&quot;New Zealand&quot;,1,&quot;Nizip&quot;),
+  (&quot;7475 Rutrum Road&quot;,&quot;Chhattisgarh&quot;,&quot;Austria&quot;,7,&quot;Lagos&quot;),
+  (&quot;646-503 Eget Avenue&quot;,&quot;Abruzzo&quot;,&quot;Ireland&quot;,9,&quot;Central Water Catchment&quot;),
+  (&quot;207-3791 Tempus Road&quot;,&quot;Zhōngnán&quot;,&quot;Spain&quot;,3,&quot;Samal&quot;),
+  (&quot;P.O. Box 789, 3518 Semper St.&quot;,&quot;North West&quot;,&quot;Costa Rica&quot;,2,&quot;Racine&quot;),
+  (&quot;407-6795 Tincidunt, Avenue&quot;,&quot;Luik&quot;,&quot;Italy&quot;,9,&quot;Tarsus&quot;),
+  (&quot;Ap #920-1408 Semper Av.&quot;,&quot;Nizhny Novgorod Oblast&quot;,&quot;Belgium&quot;,6,&quot;Astore&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;783-3574 At St.&quot;,&quot;Cartago&quot;,&quot;Peru&quot;,9,&quot;Sagamu&quot;),
+  (&quot;P.O. Box 907, 6293 Auctor Rd.&quot;,&quot;Lambayeque&quot;,&quot;Chile&quot;,8,&quot;Irkutsk&quot;),
+  (&quot;909-8605 Orci. Av.&quot;,&quot;Nevada&quot;,&quot;New Zealand&quot;,7,&quot;Jeonju&quot;),
+  (&quot;190-4785 Vulputate Road&quot;,&quot;Abruzzo&quot;,&quot;India&quot;,8,&quot;Gorontalo&quot;),
+  (&quot;P.O. Box 724, 9498 Libero Ave&quot;,&quot;Biobío&quot;,&quot;Sweden&quot;,10,&quot;Quesada&quot;),
+  (&quot;200-2762 Duis Rd.&quot;,&quot;Puntarenas&quot;,&quot;Norway&quot;,8,&quot;Lugo&quot;),
+  (&quot;P.O. Box 467, 6222 Eu Rd.&quot;,&quot;KwaZulu-Natal&quot;,&quot;Chile&quot;,8,&quot;Neumünster&quot;),
+  (&quot;Ap #864-2153 Vestibulum Ave&quot;,&quot;Umbria&quot;,&quot;Italy&quot;,8,&quot;La Plata&quot;),
+  (&quot;942-5766 Sagittis. Ave&quot;,&quot;KwaZulu-Natal&quot;,&quot;Peru&quot;,6,&quot;Vidisha&quot;),
+  (&quot;Ap #267-9112 Curae Street&quot;,&quot;Västra Götalands län&quot;,&quot;Netherlands&quot;,2,&quot;Berlin&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;115-6879 Scelerisque St.&quot;,&quot;Khyber Pakhtoonkhwa&quot;,&quot;South Africa&quot;,9,&quot;Kherson&quot;),
+  (&quot;P.O. Box 827, 9754 Nec, St.&quot;,&quot;Santander&quot;,&quot;Sweden&quot;,6,&quot;Stratford&quot;),
+  (&quot;757-3108 Quam Avenue&quot;,&quot;Pays de la Loire&quot;,&quot;New Zealand&quot;,6,&quot;Torrevieja&quot;),
+  (&quot;584 Quisque Rd.&quot;,&quot;South Island&quot;,&quot;Poland&quot;,2,&quot;Woerden&quot;),
+  (&quot;P.O. Box 580, 1218 Egestas Avenue&quot;,&quot;Northern Mindanao&quot;,&quot;Spain&quot;,4,&quot;Vinh&quot;),
+  (&quot;926-2162 Gravida St.&quot;,&quot;New South Wales&quot;,&quot;Germany&quot;,7,&quot;Odendaalsrus&quot;),
+  (&quot;P.O. Box 740, 9261 Elit Road&quot;,&quot;Huáběi&quot;,&quot;United States&quot;,6,&quot;Ellon&quot;),
+  (&quot;895-4798 Etiam St.&quot;,&quot;Eastern Visayas&quot;,&quot;Nigeria&quot;,2,&quot;Puntarenas&quot;),
+  (&quot;645-2164 Donec Road&quot;,&quot;Limón&quot;,&quot;Vietnam&quot;,5,&quot;Stjørdalshalsen&quot;),
+  (&quot;467-2037 Fusce Avenue&quot;,&quot;Zamboanga Peninsula&quot;,&quot;Nigeria&quot;,5,&quot;Tarnów&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;370-3291 Risus. Rd.&quot;,&quot;Ogun&quot;,&quot;Australia&quot;,7,&quot;Okpoko&quot;),
+  (&quot;Ap #129-6730 Ut, Ave&quot;,&quot;Victoria&quot;,&quot;Norway&quot;,5,&quot;Soweto&quot;),
+  (&quot;Ap #503-5664 Suspendisse Street&quot;,&quot;Cesar&quot;,&quot;United Kingdom&quot;,4,&quot;Fort McPherson&quot;),
+  (&quot;Ap #332-4648 Aliquam, Ave&quot;,&quot;Dōngběi&quot;,&quot;China&quot;,3,&quot;Lodine&quot;),
+  (&quot;Ap #816-2125 Mauris Road&quot;,&quot;Stockholms län&quot;,&quot;Costa Rica&quot;,5,&quot;Sibasa&quot;),
+  (&quot;Ap #135-6088 Adipiscing Rd.&quot;,&quot;Baden Württemberg&quot;,&quot;United Kingdom&quot;,6,&quot;Cairns&quot;),
+  (&quot;Ap #262-8537 In Rd.&quot;,&quot;Munster&quot;,&quot;Turkey&quot;,4,&quot;New Orleans&quot;),
+  (&quot;Ap #346-7670 Aliquet St.&quot;,&quot;Troms og Finnmark&quot;,&quot;Sweden&quot;,0,&quot;Rzeszów&quot;),
+  (&quot;P.O. Box 474, 3077 Ante St.&quot;,&quot;Xīnán&quot;,&quot;Chile&quot;,6,&quot;Szczecin&quot;),
+  (&quot;2085 Semper Rd.&quot;,&quot;Eastern Cape&quot;,&quot;Canada&quot;,4,&quot;Suruç&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;755-4468 Pede Avenue&quot;,&quot;Ulster&quot;,&quot;China&quot;,7,&quot;San Jose del Monte&quot;),
+  (&quot;Ap #625-3376 Senectus Road&quot;,&quot;Arica y Parinacota&quot;,&quot;Poland&quot;,9,&quot;Sangju&quot;),
+  (&quot;Ap #473-9991 Nunc Rd.&quot;,&quot;Missouri&quot;,&quot;Canada&quot;,1,&quot;Pamplona&quot;),
+  (&quot;Ap #798-1059 Ultricies Street&quot;,&quot;Vorarlberg&quot;,&quot;Philippines&quot;,6,&quot;Welkom&quot;),
+  (&quot;9764 Elementum St.&quot;,&quot;Kerala&quot;,&quot;Australia&quot;,1,&quot;Tuy Hòa&quot;),
+  (&quot;1181 Dui, St.&quot;,&quot;Connacht&quot;,&quot;Vietnam&quot;,7,&quot;Landeck&quot;),
+  (&quot;4610 Nunc Rd.&quot;,&quot;Ancash&quot;,&quot;Italy&quot;,9,&quot;Kielce&quot;),
+  (&quot;2132 Nunc Ave&quot;,&quot;Metropolitana de Santiago&quot;,&quot;Ukraine&quot;,2,&quot;Malaybalay&quot;),
+  (&quot;235-4823 Sed St.&quot;,&quot;Calabria&quot;,&quot;Nigeria&quot;,9,&quot;Montaldo Bormida&quot;),
+  (&quot;Ap #825-6434 Magna Road&quot;,&quot;Cartago&quot;,&quot;Netherlands&quot;,9,&quot;Bandırma&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;Ap #986-228 Cursus. St.&quot;,&quot;Chocó&quot;,&quot;South Africa&quot;,0,&quot;Fort Wayne&quot;),
+  (&quot;758-6507 Aenean Ave&quot;,&quot;Noord Brabant&quot;,&quot;Spain&quot;,9,&quot;Igboho&quot;),
+  (&quot;682-8493 Ornare. Avenue&quot;,&quot;Arequipa&quot;,&quot;Belgium&quot;,2,&quot;Sóc Trăng&quot;),
+  (&quot;563-9488 Ac Rd.&quot;,&quot;Benue&quot;,&quot;South Korea&quot;,6,&quot;Hattersheim am Main&quot;),
+  (&quot;P.O. Box 699, 6547 Sit Ave&quot;,&quot;Lima&quot;,&quot;Austria&quot;,2,&quot;Chimbote&quot;),
+  (&quot;362-3643 Aliquet, Ave&quot;,&quot;Brussels Hoofdstedelijk Gewest&quot;,&quot;Sweden&quot;,9,&quot;Wals-Siezenheim&quot;),
+  (&quot;P.O. Box 720, 5190 Commodo Av.&quot;,&quot;Utah&quot;,&quot;Sweden&quot;,7,&quot;Dublin&quot;),
+  (&quot;448 Aliquam Ave&quot;,&quot;Eastern Cape&quot;,&quot;China&quot;,10,&quot;Yaroslavl&quot;),
+  (&quot;702-9656 Fermentum Street&quot;,&quot;Zaporizhzhia oblast&quot;,&quot;Netherlands&quot;,0,&quot;Jeju&quot;),
+  (&quot;796-866 Orci Road&quot;,&quot;Australian Capital Territory&quot;,&quot;Vietnam&quot;,4,&quot;Timon&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;127-3278 Egestas, St.&quot;,&quot;Podlaskie&quot;,&quot;Canada&quot;,4,&quot;Liverpool&quot;),
+  (&quot;Ap #339-9822 Eu St.&quot;,&quot;North-East Region&quot;,&quot;Pakistan&quot;,5,&quot;Tampines&quot;),
+  (&quot;222-8254 Nunc. Av.&quot;,&quot;Herefordshire&quot;,&quot;Italy&quot;,1,&quot;Cartagena del Chairá&quot;),
+  (&quot;310-1420 Vitae St.&quot;,&quot;Troms og Finnmark&quot;,&quot;Netherlands&quot;,3,&quot;Ibagué&quot;),
+  (&quot;584-7757 Semper Road&quot;,&quot;East Region&quot;,&quot;Poland&quot;,10,&quot;Ladysmith&quot;),
+  (&quot;645-7635 Sed St.&quot;,&quot;Los Ríos&quot;,&quot;South Korea&quot;,8,&quot;Piła&quot;),
+  (&quot;Ap #181-8315 Est Street&quot;,&quot;North Jeolla&quot;,&quot;Colombia&quot;,1,&quot;Greater Hobart&quot;),
+  (&quot;Ap #896-3105 Nam Av.&quot;,&quot;Niedersachsen&quot;,&quot;United Kingdom&quot;,1,&quot;Johannesburg&quot;),
+  (&quot;4751 A, Av.&quot;,&quot;Styria&quot;,&quot;South Africa&quot;,4,&quot;Gyeongju&quot;),
+  (&quot;P.O. Box 319, 4341 Enim, St.&quot;,&quot;Florida&quot;,&quot;Australia&quot;,5,&quot;Cañas&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;932-1968 Ligula. St.&quot;,&quot;Sardegna&quot;,&quot;China&quot;,5,&quot;Celaya&quot;),
+  (&quot;849-4733 Sit St.&quot;,&quot;Stockholms län&quot;,&quot;Costa Rica&quot;,10,&quot;Novena&quot;),
+  (&quot;Ap #800-5459 Molestie Av.&quot;,&quot;East Nusa Tenggara&quot;,&quot;India&quot;,8,&quot;Tournefeuille&quot;),
+  (&quot;Ap #163-6797 Sem. Avenue&quot;,&quot;Henegouwen&quot;,&quot;Spain&quot;,4,&quot;Pasir Ris&quot;),
+  (&quot;Ap #212-5605 Posuere, St.&quot;,&quot;Illinois&quot;,&quot;New Zealand&quot;,7,&quot;Hoogeveen&quot;),
+  (&quot;P.O. Box 556, 8640 Lectus St.&quot;,&quot;Zuid Holland&quot;,&quot;New Zealand&quot;,9,&quot;Central Jakarta&quot;),
+  (&quot;Ap #253-5052 Consectetuer Av.&quot;,&quot;Akwa Ibom&quot;,&quot;Ukraine&quot;,4,&quot;Kurnool&quot;),
+  (&quot;Ap #272-1319 Eu, Av.&quot;,&quot;Zeeland&quot;,&quot;Germany&quot;,8,&quot;Alta&quot;),
+  (&quot;226-3444 Malesuada Street&quot;,&quot;Cantabria&quot;,&quot;Austria&quot;,7,&quot;Galway&quot;),
+  (&quot;P.O. Box 989, 8568 Consectetuer, St.&quot;,&quot;Niger&quot;,&quot;China&quot;,5,&quot;Pittsburgh&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;1117 Luctus St.&quot;,&quot;Xīnán&quot;,&quot;Indonesia&quot;,9,&quot;East Gwillimbury&quot;),
+  (&quot;Ap #900-1195 Nunc. St.&quot;,&quot;Ulyanovsk Oblast&quot;,&quot;Turkey&quot;,1,&quot;Gangtok&quot;),
+  (&quot;Ap #457-5296 Quis Ave&quot;,&quot;Azad Kashmir&quot;,&quot;Canada&quot;,9,&quot;Halifax&quot;),
+  (&quot;P.O. Box 669, 5525 Ac Road&quot;,&quot;Bắc Giang&quot;,&quot;Netherlands&quot;,3,&quot;Tacoma&quot;),
+  (&quot;Ap #503-8419 Eu Ave&quot;,&quot;São Paulo&quot;,&quot;Australia&quot;,5,&quot;Arendonk&quot;),
+  (&quot;Ap #974-2435 Fames Street&quot;,&quot;Cesar&quot;,&quot;Netherlands&quot;,3,&quot;La Tebaida&quot;),
+  (&quot;P.O. Box 286, 5906 Venenatis Street&quot;,&quot;Lower Austria&quot;,&quot;United States&quot;,5,&quot;Huara&quot;),
+  (&quot;4625 Vel Rd.&quot;,&quot;Zeeland&quot;,&quot;Mexico&quot;,0,&quot;Słupsk&quot;),
+  (&quot;Ap #574-3224 Lectus. Street&quot;,&quot;Salzburg&quot;,&quot;Brazil&quot;,7,&quot;Hidalgo del Parral&quot;),
+  (&quot;Ap #336-9864 Mauris St.&quot;,&quot;Manitoba&quot;,&quot;South Korea&quot;,6,&quot;Medan&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;Ap #821-7737 Vitae Road&quot;,&quot;Ilocos Region&quot;,&quot;South Korea&quot;,10,&quot;Lagos&quot;),
+  (&quot;6948 Tincidunt Av.&quot;,&quot;FATA&quot;,&quot;Belgium&quot;,7,&quot;Yekaterinburg&quot;),
+  (&quot;7684 Vitae, Street&quot;,&quot;Pernambuco&quot;,&quot;South Africa&quot;,5,&quot;Mildura&quot;),
+  (&quot;Ap #431-4086 Molestie. St.&quot;,&quot;Nova Scotia&quot;,&quot;France&quot;,2,&quot;Incheon&quot;),
+  (&quot;P.O. Box 494, 524 Tortor, St.&quot;,&quot;Jeju&quot;,&quot;Norway&quot;,10,&quot;Wellington&quot;),
+  (&quot;888-1639 Cursus Rd.&quot;,&quot;Canarias&quot;,&quot;South Korea&quot;,6,&quot;Juan Fernández&quot;),
+  (&quot;320-3076 Faucibus Avenue&quot;,&quot;Carinthia&quot;,&quot;Australia&quot;,0,&quot;Río Claro&quot;),
+  (&quot;Ap #640-4604 Ullamcorper Road&quot;,&quot;Arkhangelsk Oblast&quot;,&quot;India&quot;,4,&quot;Da Lat&quot;),
+  (&quot;Ap #231-4862 Magna Avenue&quot;,&quot;Zhōngnán&quot;,&quot;United States&quot;,0,&quot;São José dos Pinhais&quot;),
+  (&quot;6812 Dis Rd.&quot;,&quot;Ulster&quot;,&quot;Pakistan&quot;,7,&quot;Srinagar&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;P.O. Box 338, 9259 Ac St.&quot;,&quot;Quebec&quot;,&quot;Russian Federation&quot;,7,&quot;Kimberley&quot;),
+  (&quot;P.O. Box 515, 937 Erat St.&quot;,&quot;Hà Nam&quot;,&quot;Russian Federation&quot;,9,&quot;Santa Coloma de Gramenet&quot;),
+  (&quot;Ap #992-337 Tincidunt. St.&quot;,&quot;Oost-Vlaanderen&quot;,&quot;Germany&quot;,9,&quot;Kolmont&quot;),
+  (&quot;Ap #585-6254 Mollis Av.&quot;,&quot;Durham&quot;,&quot;South Korea&quot;,1,&quot;Vorst&quot;),
+  (&quot;Ap #199-1927 A St.&quot;,&quot;Yukon&quot;,&quot;Poland&quot;,7,&quot;Jeju&quot;),
+  (&quot;Ap #358-5858 Leo. Street&quot;,&quot;Xīběi&quot;,&quot;Spain&quot;,10,&quot;Sechura&quot;),
+  (&quot;Ap #828-5139 Purus Ave&quot;,&quot;Innlandet&quot;,&quot;Russian Federation&quot;,4,&quot;Galway&quot;),
+  (&quot;Ap #859-775 Pede Rd.&quot;,&quot;Champagne-Ardenne&quot;,&quot;Philippines&quot;,1,&quot;Armidale&quot;),
+  (&quot;746-9956 Sed, Road&quot;,&quot;Los Ríos&quot;,&quot;Indonesia&quot;,0,&quot;Greater Hobart&quot;),
+  (&quot;P.O. Box 917, 912 Cras Rd.&quot;,&quot;Antofagasta&quot;,&quot;South Africa&quot;,4,&quot;Legazpi&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;653-8049 Cras Rd.&quot;,&quot;Brandenburg&quot;,&quot;New Zealand&quot;,9,&quot;Heredia&quot;),
+  (&quot;P.O. Box 379, 9644 Posuere, St.&quot;,&quot;Biobío&quot;,&quot;Norway&quot;,9,&quot;Khyber Agency&quot;),
+  (&quot;3203 Molestie Rd.&quot;,&quot;Brussels Hoofdstedelijk Gewest&quot;,&quot;Costa Rica&quot;,7,&quot;Zielona Góra&quot;),
+  (&quot;Ap #911-341 Sed Road&quot;,&quot;Ilocos Region&quot;,&quot;Colombia&quot;,7,&quot;Châtellerault&quot;),
+  (&quot;Ap #893-7795 A, Rd.&quot;,&quot;Piemonte&quot;,&quot;Nigeria&quot;,2,&quot;Cimahi&quot;),
+  (&quot;427-2049 Tempus Rd.&quot;,&quot;Los Lagos&quot;,&quot;Netherlands&quot;,1,&quot;Ilagan&quot;),
+  (&quot;P.O. Box 705, 6896 Malesuada St.&quot;,&quot;East Nusa Tenggara&quot;,&quot;United Kingdom&quot;,3,&quot;Belfast&quot;),
+  (&quot;P.O. Box 753, 9282 Nec Street&quot;,&quot;South Island&quot;,&quot;Sweden&quot;,7,&quot;Tam Kỳ&quot;),
+  (&quot;Ap #377-2890 Arcu. Street&quot;,&quot;Lai Châu&quot;,&quot;Ukraine&quot;,3,&quot;Lima&quot;),
+  (&quot;974-3605 Lobortis Av.&quot;,&quot;Berkshire&quot;,&quot;Spain&quot;,4,&quot;Montes Claros&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;598-6462 A, Avenue&quot;,&quot;Arkhangelsk Oblast&quot;,&quot;Sweden&quot;,3,&quot;Rochester&quot;),
+  (&quot;764-2825 Pharetra Street&quot;,&quot;Alabama&quot;,&quot;Nigeria&quot;,8,&quot;Götzis&quot;),
+  (&quot;Ap #181-576 Velit St.&quot;,&quot;Akwa Ibom&quot;,&quot;Sweden&quot;,2,&quot;Killa Abdullah&quot;),
+  (&quot;8415 Lobortis Av.&quot;,&quot;Guaviare&quot;,&quot;Spain&quot;,1,&quot;Panabo&quot;),
+  (&quot;Ap #998-6016 Cursus Rd.&quot;,&quot;Nova Scotia&quot;,&quot;Vietnam&quot;,7,&quot;Jecheon&quot;),
+  (&quot;838-870 Nunc Avenue&quot;,&quot;Puntarenas&quot;,&quot;Chile&quot;,6,&quot;Duque de Caxias&quot;),
+  (&quot;Ap #284-5406 Nostra, Ave&quot;,&quot;Bắc Kạn&quot;,&quot;Colombia&quot;,9,&quot;Kawawachikamach&quot;),
+  (&quot;Ap #208-7879 Vel Ave&quot;,&quot;Cesar&quot;,&quot;Italy&quot;,3,&quot;Guápiles&quot;),
+  (&quot;835-9552 Justo Av.&quot;,&quot;Arkhangelsk Oblast&quot;,&quot;Russian Federation&quot;,9,&quot;Tranås&quot;),
+  (&quot;426-2220 Mus. Av.&quot;,&quot;Sląskie&quot;,&quot;Peru&quot;,1,&quot;Dublin&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;5898 Non, Street&quot;,&quot;Chernivtsi oblast&quot;,&quot;Ukraine&quot;,0,&quot;Chuncheon&quot;),
+  (&quot;P.O. Box 162, 7161 Dapibus Av.&quot;,&quot;Nuevo León&quot;,&quot;Costa Rica&quot;,6,&quot;Gjøvik&quot;),
+  (&quot;P.O. Box 515, 6464 Purus Av.&quot;,&quot;Fife&quot;,&quot;China&quot;,8,&quot;Inverness&quot;),
+  (&quot;P.O. Box 478, 3494 Ornare. Rd.&quot;,&quot;Minas Gerais&quot;,&quot;Ukraine&quot;,5,&quot;Bajaur Agency&quot;),
+  (&quot;P.O. Box 127, 3497 Sapien Rd.&quot;,&quot;Tyumen Oblast&quot;,&quot;Indonesia&quot;,8,&quot;Hard&quot;),
+  (&quot;Ap #259-1624 Non Rd.&quot;,&quot;Maule&quot;,&quot;Germany&quot;,7,&quot;Zaragoza&quot;),
+  (&quot;719-8796 Libero. Avenue&quot;,&quot;Michigan&quot;,&quot;France&quot;,4,&quot;Cà Mau&quot;),
+  (&quot;Ap #474-2479 Est, Ave&quot;,&quot;Louisiana&quot;,&quot;Colombia&quot;,4,&quot;Logroño&quot;),
+  (&quot;5361 Nunc Avenue&quot;,&quot;Punjab&quot;,&quot;China&quot;,8,&quot;Cuernavaca&quot;),
+  (&quot;751-5345 Diam. St.&quot;,&quot;Schleswig-Holstein&quot;,&quot;Colombia&quot;,7,&quot;Jinju&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;Ap #865-9039 Sem Street&quot;,&quot;Belgorod Oblast&quot;,&quot;United States&quot;,6,&quot;Cork&quot;),
+  (&quot;796-6793 Senectus St.&quot;,&quot;Queensland&quot;,&quot;Vietnam&quot;,7,&quot;Lào Cai&quot;),
+  (&quot;P.O. Box 546, 7064 Sed Street&quot;,&quot;Auvergne&quot;,&quot;Peru&quot;,2,&quot;Puntarenas&quot;),
+  (&quot;P.O. Box 636, 5247 Habitant Av.&quot;,&quot;Alajuela&quot;,&quot;Ireland&quot;,8,&quot;Abeokuta&quot;),
+  (&quot;Ap #582-1615 Integer Rd.&quot;,&quot;Monmouthshire&quot;,&quot;Vietnam&quot;,1,&quot;Lagos&quot;),
+  (&quot;816-2642 Eget St.&quot;,&quot;Schleswig-Holstein&quot;,&quot;Australia&quot;,4,&quot;Parauapebas&quot;),
+  (&quot;Ap #872-7406 Sed St.&quot;,&quot;Île-de-France&quot;,&quot;United States&quot;,4,&quot;Rae Bareli&quot;),
+  (&quot;939-8233 Nisl Avenue&quot;,&quot;Benue&quot;,&quot;Chile&quot;,2,&quot;Galway&quot;),
+  (&quot;992-9724 Mauris Street&quot;,&quot;Andhra Pradesh&quot;,&quot;United Kingdom&quot;,0,&quot;Albany&quot;),
+  (&quot;2837 Risus. Rd.&quot;,&quot;Champagne-Ardenne&quot;,&quot;India&quot;,1,&quot;Foligno&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;Ap #611-3972 Diam. St.&quot;,&quot;Benue&quot;,&quot;Germany&quot;,1,&quot;Funtua&quot;),
+  (&quot;4674 Velit Ave&quot;,&quot;Zuid Holland&quot;,&quot;Peru&quot;,7,&quot;Dannevirke&quot;),
+  (&quot;P.O. Box 467, 6991 Pellentesque Ave&quot;,&quot;Stockholms län&quot;,&quot;Pakistan&quot;,8,&quot;Paradise&quot;),
+  (&quot;6517 Pede, Ave&quot;,&quot;Los Lagos&quot;,&quot;Italy&quot;,8,&quot;Cheongju&quot;),
+  (&quot;224-8138 Pretium St.&quot;,&quot;Gangwon&quot;,&quot;Peru&quot;,9,&quot;Medio Atrato&quot;),
+  (&quot;Ap #928-7173 Adipiscing St.&quot;,&quot;Aragón&quot;,&quot;Germany&quot;,1,&quot;Bogotá&quot;),
+  (&quot;Ap #445-5721 Nunc Rd.&quot;,&quot;Drenthe&quot;,&quot;Spain&quot;,4,&quot;Pagadian&quot;),
+  (&quot;206-9372 Nibh Rd.&quot;,&quot;Guanacaste&quot;,&quot;Singapore&quot;,2,&quot;Devonport&quot;),
+  (&quot;193-6410 Adipiscing. Av.&quot;,&quot;Cagayan Valley&quot;,&quot;Brazil&quot;,8,&quot;Loppem&quot;),
+  (&quot;P.O. Box 585, 3013 Eget, Street&quot;,&quot;Chiapas&quot;,&quot;Colombia&quot;,1,&quot;Legazpi&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;Ap #745-6385 Rhoncus Avenue&quot;,&quot;Dolnośląskie&quot;,&quot;Spain&quot;,6,&quot;Vichy&quot;),
+  (&quot;5770 Malesuada Avenue&quot;,&quot;Gaziantep&quot;,&quot;Australia&quot;,6,&quot;Gifhorn&quot;),
+  (&quot;P.O. Box 925, 3877 Augue St.&quot;,&quot;Guanacaste&quot;,&quot;Italy&quot;,2,&quot;Galway&quot;),
+  (&quot;Ap #360-1985 Arcu. Avenue&quot;,&quot;Basilicata&quot;,&quot;United Kingdom&quot;,6,&quot;Nicoya&quot;),
+  (&quot;Ap #364-737 Risus. Avenue&quot;,&quot;Mpumalanga&quot;,&quot;Sweden&quot;,5,&quot;Silchar&quot;),
+  (&quot;P.O. Box 550, 9616 Parturient St.&quot;,&quot;Pennsylvania&quot;,&quot;Colombia&quot;,3,&quot;Broken Hill&quot;),
+  (&quot;Ap #383-4366 Et Road&quot;,&quot;Tripura&quot;,&quot;Chile&quot;,1,&quot;Tapachula&quot;),
+  (&quot;Ap #554-9353 Et Street&quot;,&quot;Dōngběi&quot;,&quot;Sweden&quot;,6,&quot;Đồng Hới&quot;),
+  (&quot;Ap #590-9141 Sem Rd.&quot;,&quot;Eastern Cape&quot;,&quot;Norway&quot;,10,&quot;Gimhae&quot;),
+  (&quot;Ap #855-1313 Ante Street&quot;,&quot;Guanacaste&quot;,&quot;Sweden&quot;,7,&quot;West Jakarta&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;Ap #433-4829 Non Rd.&quot;,&quot;Louisiana&quot;,&quot;Colombia&quot;,2,&quot;Körfez&quot;),
+  (&quot;234-9589 Nulla. Road&quot;,&quot;Friuli-Venezia Giulia&quot;,&quot;Mexico&quot;,2,&quot;Toruń&quot;),
+  (&quot;P.O. Box 625, 9661 Orci St.&quot;,&quot;Wielkopolskie&quot;,&quot;Belgium&quot;,3,&quot;Berdiansk&quot;),
+  (&quot;Ap #975-6541 Justo Rd.&quot;,&quot;Burgenland&quot;,&quot;Canada&quot;,2,&quot;Biên Hòa&quot;),
+  (&quot;776-5816 Gravida. Rd.&quot;,&quot;Trøndelag&quot;,&quot;Ukraine&quot;,4,&quot;Tianjin&quot;),
+  (&quot;381-3225 Nam Street&quot;,&quot;Chelyabinsk Oblast&quot;,&quot;United States&quot;,3,&quot;Mykolaiv&quot;),
+  (&quot;P.O. Box 410, 9979 Felis Ave&quot;,&quot;Pará&quot;,&quot;Pakistan&quot;,3,&quot;Gyeongsan&quot;),
+  (&quot;9831 Mauris St.&quot;,&quot;Khyber Pakhtoonkhwa&quot;,&quot;Ireland&quot;,2,&quot;Liberia&quot;),
+  (&quot;Ap #404-9941 Nisl. Rd.&quot;,&quot;Aragón&quot;,&quot;Ireland&quot;,6,&quot;Valencia&quot;),
+  (&quot;Ap #358-9220 In, Avenue&quot;,&quot;Khyber Pakhtoonkhwa&quot;,&quot;South Africa&quot;,1,&quot;Greater Hobart&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;8035 Dictum Rd.&quot;,&quot;North West&quot;,&quot;Spain&quot;,6,&quot;Minna&quot;),
+  (&quot;982-7065 Est Road&quot;,&quot;Washington&quot;,&quot;Russian Federation&quot;,10,&quot;Barra do Corda&quot;),
+  (&quot;Ap #814-9671 Ante. Road&quot;,&quot;Lambayeque&quot;,&quot;Australia&quot;,0,&quot;Pskov&quot;),
+  (&quot;840-7298 Mauris St.&quot;,&quot;Catalunya&quot;,&quot;Mexico&quot;,5,&quot;Istanbul&quot;),
+  (&quot;4346 Ridiculus Rd.&quot;,&quot;Limpopo&quot;,&quot;Austria&quot;,1,&quot;Ålesund&quot;),
+  (&quot;743-796 Taciti Street&quot;,&quot;Herefordshire&quot;,&quot;Norway&quot;,10,&quot;Montreuil&quot;),
+  (&quot;P.O. Box 933, 8135 Semper Ave&quot;,&quot;Arauca&quot;,&quot;Peru&quot;,6,&quot;Pachuca&quot;),
+  (&quot;520-4345 Praesent Rd.&quot;,&quot;Lower Austria&quot;,&quot;Germany&quot;,7,&quot;Warszawa&quot;),
+  (&quot;538-7313 Lorem, Ave&quot;,&quot;Lower Austria&quot;,&quot;United Kingdom&quot;,1,&quot;Tulln an der Donau&quot;),
+  (&quot;Ap #410-3253 Orci, Street&quot;,&quot;Pskov Oblast&quot;,&quot;United States&quot;,1,&quot;Opole&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;P.O. Box 867, 2721 Praesent Ave&quot;,&quot;Veneto&quot;,&quot;India&quot;,8,&quot;Rum&quot;),
+  (&quot;Ap #618-6390 Sed St.&quot;,&quot;North West&quot;,&quot;New Zealand&quot;,6,&quot;Norfolk County&quot;),
+  (&quot;P.O. Box 443, 2593 Placerat Ave&quot;,&quot;Ulster&quot;,&quot;Ireland&quot;,6,&quot;Arnhem&quot;),
+  (&quot;592-2218 Risus St.&quot;,&quot;Magallanes y Antártica Chilena&quot;,&quot;Germany&quot;,1,&quot;Tilburg&quot;),
+  (&quot;Ap #238-6489 Posuere Avenue&quot;,&quot;Leinster&quot;,&quot;Brazil&quot;,2,&quot;Bahraich&quot;),
+  (&quot;Ap #114-6700 Sed, Street&quot;,&quot;Bangka Belitung Islands&quot;,&quot;Belgium&quot;,7,&quot;Pamplona&quot;),
+  (&quot;488-6861 Sed St.&quot;,&quot;Flevoland&quot;,&quot;United States&quot;,3,&quot;Bắc Kạn&quot;),
+  (&quot;P.O. Box 784, 6292 Nulla Street&quot;,&quot;Gangwon&quot;,&quot;Colombia&quot;,2,&quot;Cork&quot;),
+  (&quot;P.O. Box 194, 4170 Aliquet. Rd.&quot;,&quot;Franche-Comté&quot;,&quot;Italy&quot;,7,&quot;Tibet&quot;),
+  (&quot;540-1000 Faucibus Street&quot;,&quot;Tarapacá&quot;,&quot;Italy&quot;,2,&quot;Rạch Giá&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;491-4585 Eu Rd.&quot;,&quot;Riau&quot;,&quot;Brazil&quot;,8,&quot;Soledad&quot;),
+  (&quot;P.O. Box 781, 8365 Vivamus Ave&quot;,&quot;Papua&quot;,&quot;Indonesia&quot;,4,&quot;Dutse&quot;),
+  (&quot;505-5534 Eu Road&quot;,&quot;North-East Region&quot;,&quot;Vietnam&quot;,6,&quot;Geoje&quot;),
+  (&quot;Ap #963-1653 Purus, St.&quot;,&quot;Australian Capital Territory&quot;,&quot;South Africa&quot;,2,&quot;Vienna&quot;),
+  (&quot;947-9081 Sapien. Avenue&quot;,&quot;Ohio&quot;,&quot;Singapore&quot;,6,&quot;Soledad&quot;),
+  (&quot;Ap #821-5771 Lacinia St.&quot;,&quot;Đồng Tháp&quot;,&quot;Colombia&quot;,0,&quot;Saint-Malo&quot;),
+  (&quot;P.O. Box 417, 4001 Justo Av.&quot;,&quot;South Island&quot;,&quot;Canada&quot;,9,&quot;Mora&quot;),
+  (&quot;976 Eget, Street&quot;,&quot;Gävleborgs län&quot;,&quot;France&quot;,4,&quot;Leonding&quot;),
+  (&quot;8960 Sodales Road&quot;,&quot;Mpumalanga&quot;,&quot;United States&quot;,3,&quot;General Santos&quot;),
+  (&quot;P.O. Box 968, 492 Lobortis Rd.&quot;,&quot;Nariño&quot;,&quot;Ukraine&quot;,5,&quot;Illkirch-Graffenstaden&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;P.O. Box 889, 6747 Eu Road&quot;,&quot;Mykolaiv oblast&quot;,&quot;Austria&quot;,3,&quot;Tomaszów Mazowiecki&quot;),
+  (&quot;8877 Sed Ave&quot;,&quot;Roxburghshire&quot;,&quot;Peru&quot;,8,&quot;Springfield&quot;),
+  (&quot;8945 Nisl Av.&quot;,&quot;Adana&quot;,&quot;Brazil&quot;,4,&quot;Belgaum&quot;),
+  (&quot;400-5087 Tellus. Rd.&quot;,&quot;Puebla&quot;,&quot;Singapore&quot;,0,&quot;Galway&quot;),
+  (&quot;515-5777 Faucibus Av.&quot;,&quot;South Island&quot;,&quot;Ukraine&quot;,3,&quot;Dublin&quot;),
+  (&quot;843-6646 Morbi Street&quot;,&quot;Gilgit Baltistan&quot;,&quot;Peru&quot;,1,&quot;Benoni&quot;),
+  (&quot;P.O. Box 252, 7268 A, Road&quot;,&quot;Junín&quot;,&quot;Vietnam&quot;,3,&quot;Arbre&quot;),
+  (&quot;P.O. Box 628, 5019 Metus. Road&quot;,&quot;Loreto&quot;,&quot;Philippines&quot;,4,&quot;Tomaszów Mazowiecki&quot;),
+  (&quot;P.O. Box 401, 7140 Libero. St.&quot;,&quot;Central Region&quot;,&quot;Italy&quot;,7,&quot;Gansu&quot;),
+  (&quot;758-958 Magna, Ave&quot;,&quot;Quindío&quot;,&quot;Chile&quot;,5,&quot;Nova Kakhovka&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;Ap #340-7976 A Street&quot;,&quot;Hòa Bình&quot;,&quot;Colombia&quot;,1,&quot;Pondicherry&quot;),
+  (&quot;P.O. Box 136, 5729 Praesent Av.&quot;,&quot;Katsina&quot;,&quot;Nigeria&quot;,7,&quot;Vitória da Conquista&quot;),
+  (&quot;2097 Dui. St.&quot;,&quot;San José&quot;,&quot;Germany&quot;,8,&quot;Río Verde&quot;),
+  (&quot;242-8025 Feugiat St.&quot;,&quot;Bursa&quot;,&quot;Brazil&quot;,4,&quot;Cork&quot;),
+  (&quot;8566 Neque. Street&quot;,&quot;Nordrhein-Westphalen&quot;,&quot;France&quot;,3,&quot;Vienna&quot;),
+  (&quot;Ap #795-9327 Cras Ave&quot;,&quot;Nuevo León&quot;,&quot;Costa Rica&quot;,5,&quot;Berlin&quot;),
+  (&quot;529-8492 Mauris. Street&quot;,&quot;Kentucky&quot;,&quot;Germany&quot;,8,&quot;Davoli&quot;),
+  (&quot;3617 Mauris Rd.&quot;,&quot;Comunitat Valenciana&quot;,&quot;Nigeria&quot;,9,&quot;Lutterworth&quot;),
+  (&quot;Ap #661-2193 Eget Rd.&quot;,&quot;Westmorland&quot;,&quot;France&quot;,4,&quot;Halberstadt&quot;),
+  (&quot;313-1027 Eu, Road&quot;,&quot;Tyrol&quot;,&quot;Costa Rica&quot;,4,&quot;Rugby&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;919-2153 Mauris Avenue&quot;,&quot;Ilocos Region&quot;,&quot;Norway&quot;,10,&quot;Kollam&quot;),
+  (&quot;Ap #112-3569 Quis Street&quot;,&quot;North Island&quot;,&quot;Turkey&quot;,4,&quot;Quilpué&quot;),
+  (&quot;301-4581 Egestas. St.&quot;,&quot;Davao Region&quot;,&quot;Chile&quot;,4,&quot;Gia Nghĩa&quot;),
+  (&quot;726-3920 Mi. Road&quot;,&quot;Mizoram&quot;,&quot;South Africa&quot;,8,&quot;Geertruidenberg&quot;),
+  (&quot;P.O. Box 270, 1562 Dolor. Avenue&quot;,&quot;San José&quot;,&quot;New Zealand&quot;,4,&quot;Tianjin&quot;),
+  (&quot;P.O. Box 241, 1778 Amet Street&quot;,&quot;North Island&quot;,&quot;Norway&quot;,8,&quot;Ghanche&quot;),
+  (&quot;Ap #517-5998 In, Avenue&quot;,&quot;National Capital Region&quot;,&quot;United States&quot;,8,&quot;Reims&quot;),
+  (&quot;3680 Amet, Road&quot;,&quot;East Lothian&quot;,&quot;Brazil&quot;,8,&quot;Palma de Mallorca&quot;),
+  (&quot;2656 Mus. Av.&quot;,&quot;Pomorskie&quot;,&quot;United Kingdom&quot;,7,&quot;Pontarlier&quot;),
+  (&quot;Ap #630-1240 Magna. Av.&quot;,&quot;Punjab&quot;,&quot;United Kingdom&quot;,8,&quot;Bremen&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;2053 Nunc, Rd.&quot;,&quot;Nebraska&quot;,&quot;Costa Rica&quot;,8,&quot;Serangoon&quot;),
+  (&quot;P.O. Box 289, 2404 Pellentesque St.&quot;,&quot;Gilgit Baltistan&quot;,&quot;Turkey&quot;,4,&quot;Pabianice&quot;),
+  (&quot;7316 Elit. Rd.&quot;,&quot;North Island&quot;,&quot;South Africa&quot;,4,&quot;Nicoya&quot;),
+  (&quot;770-5134 Erat Rd.&quot;,&quot;Lorraine&quot;,&quot;Sweden&quot;,6,&quot;Rodez&quot;),
+  (&quot;161-7256 Per Rd.&quot;,&quot;Leinster&quot;,&quot;Chile&quot;,8,&quot;Piedecuesta&quot;),
+  (&quot;Ap #630-7973 Quam, Av.&quot;,&quot;Stockholms län&quot;,&quot;Colombia&quot;,2,&quot;Minatitlán&quot;),
+  (&quot;P.O. Box 510, 8211 Nulla Rd.&quot;,&quot;Yên Bái&quot;,&quot;Singapore&quot;,1,&quot;Buenaventura&quot;),
+  (&quot;259-2132 Laoreet, Ave&quot;,&quot;Thái Bình&quot;,&quot;France&quot;,0,&quot;Arequipa&quot;),
+  (&quot;442-1270 Massa. Av.&quot;,&quot;Møre og Romsdal&quot;,&quot;Russian Federation&quot;,2,&quot;Dublin&quot;),
+  (&quot;Ap #261-9644 Quis Street&quot;,&quot;Adana&quot;,&quot;Nigeria&quot;,0,&quot;Kupang&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;509-2043 Vulputate, Ave&quot;,&quot;Murcia&quot;,&quot;Norway&quot;,9,&quot;Monte Vidon Corrado&quot;),
+  (&quot;Ap #450-8106 Nisi St.&quot;,&quot;Yorkshire&quot;,&quot;Canada&quot;,0,&quot;Vitry-sur-Seine&quot;),
+  (&quot;P.O. Box 794, 3573 At, Rd.&quot;,&quot;Languedoc-Roussillon&quot;,&quot;Nigeria&quot;,2,&quot;Oyo&quot;),
+  (&quot;P.O. Box 335, 5349 Nascetur Ave&quot;,&quot;Noord Brabant&quot;,&quot;Sweden&quot;,3,&quot;Choa Chu Kang&quot;),
+  (&quot;744-7110 Nunc Road&quot;,&quot;Ogun&quot;,&quot;France&quot;,3,&quot;Macul&quot;),
+  (&quot;1167 Vel Ave&quot;,&quot;Connacht&quot;,&quot;South Korea&quot;,8,&quot;Canberra&quot;),
+  (&quot;227-1886 Nunc Rd.&quot;,&quot;Sikkim&quot;,&quot;Russian Federation&quot;,6,&quot;Canberra&quot;),
+  (&quot;Ap #320-9523 Eu Road&quot;,&quot;East Region&quot;,&quot;Italy&quot;,10,&quot;Grandrieu&quot;),
+  (&quot;Ap #668-7196 Curabitur Road&quot;,&quot;North Island&quot;,&quot;Poland&quot;,5,&quot;Macklin&quot;),
+  (&quot;Ap #509-8364 Ac Ave&quot;,&quot;Ulster&quot;,&quot;Canada&quot;,4,&quot;Puerto Colombia&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;733-2406 Volutpat Rd.&quot;,&quot;West Sumatra&quot;,&quot;Belgium&quot;,1,&quot;Cusco&quot;),
+  (&quot;821-5946 Sed Ave&quot;,&quot;Tyrol&quot;,&quot;Australia&quot;,7,&quot;Linton&quot;),
+  (&quot;693-6737 Massa. Rd.&quot;,&quot;South Jeolla&quot;,&quot;France&quot;,5,&quot;San José de Alajuela&quot;),
+  (&quot;420-9262 Mi Road&quot;,&quot;Xīběi&quot;,&quot;New Zealand&quot;,2,&quot;Serik&quot;),
+  (&quot;355-4322 Nam Road&quot;,&quot;Northwest Territories&quot;,&quot;Philippines&quot;,7,&quot;Palmerston&quot;),
+  (&quot;839-756 At Road&quot;,&quot;Emilia-Romagna&quot;,&quot;Norway&quot;,4,&quot;Ełk&quot;),
+  (&quot;351-862 Amet Rd.&quot;,&quot;Hawaii&quot;,&quot;Sweden&quot;,2,&quot;Vienna&quot;),
+  (&quot;173-8104 Consectetuer Street&quot;,&quot;Tyrol&quot;,&quot;Poland&quot;,4,&quot;La Roche-sur-Yon&quot;),
+  (&quot;Ap #289-1380 Lacus. Av.&quot;,&quot;Punjab&quot;,&quot;Italy&quot;,5,&quot;Parañaque&quot;),
+  (&quot;Ap #812-130 Convallis Road&quot;,&quot;Minas Gerais&quot;,&quot;Australia&quot;,9,&quot;Belgrave&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;412 Ornare, Avenue&quot;,&quot;Heredia&quot;,&quot;Norway&quot;,3,&quot;Ligao&quot;),
+  (&quot;4183 A St.&quot;,&quot;Cusco&quot;,&quot;Australia&quot;,4,&quot;Silvan&quot;),
+  (&quot;Ap #406-1604 Eget Road&quot;,&quot;Comunitat Valenciana&quot;,&quot;Nigeria&quot;,7,&quot;Groenlo&quot;),
+  (&quot;711-3614 Orci Av.&quot;,&quot;North-East Region&quot;,&quot;Austria&quot;,9,&quot;Huancayo&quot;),
+  (&quot;Ap #922-5176 Aenean Avenue&quot;,&quot;Lima&quot;,&quot;Canada&quot;,6,&quot;Ollagüe&quot;),
+  (&quot;P.O. Box 317, 3929 Elit, Rd.&quot;,&quot;Special Region of Yogyakarta&quot;,&quot;Philippines&quot;,2,&quot;Catacaos&quot;),
+  (&quot;Ap #188-3635 Quam. Rd.&quot;,&quot;New South Wales&quot;,&quot;Australia&quot;,2,&quot;Eisenstadt&quot;),
+  (&quot;951-8154 Hendrerit Av.&quot;,&quot;Sokoto&quot;,&quot;Netherlands&quot;,5,&quot;Iqaluit&quot;),
+  (&quot;P.O. Box 775, 3460 Sem Rd.&quot;,&quot;Hậu Giang&quot;,&quot;Netherlands&quot;,9,&quot;Fredericton&quot;),
+  (&quot;Ap #963-5034 Lacinia Av.&quot;,&quot;Saint Petersburg City&quot;,&quot;Canada&quot;,4,&quot;Metz&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;Ap #732-9561 Felis. St.&quot;,&quot;Bretagne&quot;,&quot;United States&quot;,2,&quot;Gifhorn&quot;),
+  (&quot;Ap #693-7062 Eu Av.&quot;,&quot;Leinster&quot;,&quot;United States&quot;,7,&quot;Limón (Puerto Limón]&quot;),
+  (&quot;213-9410 Risus. Rd.&quot;,&quot;Southeast Sulawesi&quot;,&quot;Australia&quot;,0,&quot;Kidapawan&quot;),
+  (&quot;508-7281 Est Avenue&quot;,&quot;Guanacaste&quot;,&quot;Chile&quot;,9,&quot;Nizhny&quot;),
+  (&quot;8489 Leo. Av.&quot;,&quot;Minnesota&quot;,&quot;Chile&quot;,5,&quot;Ikot Ekpene&quot;),
+  (&quot;824-1340 In Rd.&quot;,&quot;Tabasco&quot;,&quot;Canada&quot;,8,&quot;Iriga&quot;),
+  (&quot;Ap #431-7042 Aliquam Street&quot;,&quot;East Region&quot;,&quot;Vietnam&quot;,3,&quot;Skövde&quot;),
+  (&quot;Ap #423-7887 Odio Av.&quot;,&quot;Yukon&quot;,&quot;Australia&quot;,3,&quot;Hengelo&quot;),
+  (&quot;Ap #980-8372 Ac Road&quot;,&quot;Noord Brabant&quot;,&quot;Australia&quot;,2,&quot;Purén&quot;),
+  (&quot;P.O. Box 311, 1810 Nunc. Road&quot;,&quot;Overijssel&quot;,&quot;Russian Federation&quot;,3,&quot;Mobile&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;287-2612 Nunc St.&quot;,&quot;Drenthe&quot;,&quot;Canada&quot;,6,&quot;Miryang&quot;),
+  (&quot;124-4007 Sed Road&quot;,&quot;West Region&quot;,&quot;China&quot;,6,&quot;Khushab&quot;),
+  (&quot;847 Donec Street&quot;,&quot;Gangwon&quot;,&quot;Chile&quot;,7,&quot;San Piero a Sieve&quot;),
+  (&quot;Ap #529-889 In St.&quot;,&quot;Kano&quot;,&quot;Russian Federation&quot;,3,&quot;Guizhou&quot;),
+  (&quot;131 Nascetur Road&quot;,&quot;Rio de Janeiro&quot;,&quot;Sweden&quot;,4,&quot;Masbate City&quot;),
+  (&quot;Ap #511-4509 Scelerisque Ave&quot;,&quot;Los Lagos&quot;,&quot;United Kingdom&quot;,7,&quot;San José&quot;),
+  (&quot;710-3808 Hymenaeos. Ave&quot;,&quot;Guanacaste&quot;,&quot;Philippines&quot;,3,&quot;Daman&quot;),
+  (&quot;8252 Et Avenue&quot;,&quot;North Gyeongsang&quot;,&quot;Spain&quot;,1,&quot;Wals-Siezenheim&quot;),
+  (&quot;P.O. Box 146, 5316 Ac Ave&quot;,&quot;Styria&quot;,&quot;Sweden&quot;,7,&quot;Ulloa (Barrial]&quot;),
+  (&quot;P.O. Box 621, 8027 Egestas. Rd.&quot;,&quot;Agder&quot;,&quot;United Kingdom&quot;,0,&quot;Saint Petersburg&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;116-9954 Ultricies Rd.&quot;,&quot;Querétaro&quot;,&quot;Mexico&quot;,10,&quot;Arequipa&quot;),
+  (&quot;Ap #686-3551 A, Road&quot;,&quot;Bauchi&quot;,&quot;Australia&quot;,4,&quot;Vetlanda&quot;),
+  (&quot;475 A, St.&quot;,&quot;Kogi&quot;,&quot;Nigeria&quot;,7,&quot;Queenstown&quot;),
+  (&quot;607 Convallis St.&quot;,&quot;Melilla&quot;,&quot;South Korea&quot;,8,&quot;Panipat&quot;),
+  (&quot;Ap #419-3400 Non Road&quot;,&quot;Đắk Lắk&quot;,&quot;Norway&quot;,9,&quot;Chimbote&quot;),
+  (&quot;8618 Et, Avenue&quot;,&quot;Vienna&quot;,&quot;Norway&quot;,5,&quot;Norrköping&quot;),
+  (&quot;544-9724 Metus Avenue&quot;,&quot;Wielkopolskie&quot;,&quot;United Kingdom&quot;,3,&quot;Puno&quot;),
+  (&quot;P.O. Box 196, 5534 Neque Rd.&quot;,&quot;Swiętokrzyskie&quot;,&quot;Brazil&quot;,6,&quot;Tierra Amarilla&quot;),
+  (&quot;125-2185 Libero. Street&quot;,&quot;Dōngběi&quot;,&quot;Canada&quot;,2,&quot;North-Eastern Islands&quot;),
+  (&quot;Ap #377-3261 Luctus Avenue&quot;,&quot;East Region&quot;,&quot;China&quot;,7,&quot;Deutschkreutz&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;Ap #172-2164 Mollis Avenue&quot;,&quot;Bedfordshire&quot;,&quot;Russian Federation&quot;,6,&quot;Bagh&quot;),
+  (&quot;Ap #841-715 Arcu Street&quot;,&quot;Marche&quot;,&quot;China&quot;,3,&quot;Barranca&quot;),
+  (&quot;Ap #819-3485 Lectus St.&quot;,&quot;Tula Oblast&quot;,&quot;Austria&quot;,2,&quot;Bollnäs&quot;),
+  (&quot;695-4790 Donec Ave&quot;,&quot;New South Wales&quot;,&quot;Norway&quot;,1,&quot;Hải Phòng&quot;),
+  (&quot;Ap #727-7436 Mi St.&quot;,&quot;San José&quot;,&quot;China&quot;,4,&quot;Leersum&quot;),
+  (&quot;Ap #115-8939 Commodo St.&quot;,&quot;Sokoto&quot;,&quot;Vietnam&quot;,6,&quot;Mokpo&quot;),
+  (&quot;Ap #337-4099 Curabitur St.&quot;,&quot;North Jeolla&quot;,&quot;Singapore&quot;,4,&quot;Oslo&quot;),
+  (&quot;P.O. Box 431, 4922 Nisl St.&quot;,&quot;Magallanes y Antártica Chilena&quot;,&quot;Sweden&quot;,7,&quot;Srinagar&quot;),
+  (&quot;Ap #255-3960 Enim. Ave&quot;,&quot;Veneto&quot;,&quot;Spain&quot;,4,&quot;Zamboanga City&quot;),
+  (&quot;Ap #550-8982 Nunc St.&quot;,&quot;North Region&quot;,&quot;Austria&quot;,1,&quot;Sandnessjøen&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;698-6461 Donec Avenue&quot;,&quot;Sokoto&quot;,&quot;Indonesia&quot;,4,&quot;Newcastle&quot;),
+  (&quot;7344 Eleifend Avenue&quot;,&quot;Zuid Holland&quot;,&quot;Austria&quot;,6,&quot;Colleretto Castelnuovo&quot;),
+  (&quot;Ap #871-7335 Adipiscing Rd.&quot;,&quot;Møre og Romsdal&quot;,&quot;New Zealand&quot;,0,&quot;Portland&quot;),
+  (&quot;Ap #143-7331 At Road&quot;,&quot;Overijssel&quot;,&quot;South Korea&quot;,4,&quot;Wuppertal&quot;),
+  (&quot;P.O. Box 341, 7567 Nec St.&quot;,&quot;Coquimbo&quot;,&quot;Vietnam&quot;,3,&quot;Oldenzaal&quot;),
+  (&quot;P.O. Box 562, 581 Sit Avenue&quot;,&quot;Bayern&quot;,&quot;Poland&quot;,10,&quot;Arica&quot;),
+  (&quot;419-7643 Vel Rd.&quot;,&quot;Oost-Vlaanderen&quot;,&quot;Austria&quot;,8,&quot;Olathe&quot;),
+  (&quot;1954 Accumsan Avenue&quot;,&quot;North Island&quot;,&quot;South Africa&quot;,4,&quot;Harnai&quot;),
+  (&quot;909-9336 Elementum Rd.&quot;,&quot;Rheinland-Pfalz&quot;,&quot;Ireland&quot;,6,&quot;Columbia&quot;),
+  (&quot;7511 Non Rd.&quot;,&quot;Jalisco&quot;,&quot;Russian Federation&quot;,8,&quot;Soledad de Graciano Sánchez&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;411-1299 Metus. Road&quot;,&quot;West-Vlaanderen&quot;,&quot;South Africa&quot;,3,&quot;Castelló&quot;),
+  (&quot;Ap #867-1404 Lorem Rd.&quot;,&quot;Hà Tĩnh&quot;,&quot;Canada&quot;,1,&quot;Gubkin&quot;),
+  (&quot;3439 Eu Rd.&quot;,&quot;Western Cape&quot;,&quot;Belgium&quot;,5,&quot;Penza&quot;),
+  (&quot;Ap #873-275 Enim. Rd.&quot;,&quot;Cambridgeshire&quot;,&quot;Sweden&quot;,6,&quot;Laakirchen&quot;),
+  (&quot;Ap #795-9410 Proin Rd.&quot;,&quot;Hải Dương&quot;,&quot;Russian Federation&quot;,1,&quot;Elverum&quot;),
+  (&quot;P.O. Box 179, 8192 Purus, St.&quot;,&quot;Central Visayas&quot;,&quot;Ireland&quot;,1,&quot;Tidore&quot;),
+  (&quot;876-4358 Eu Avenue&quot;,&quot;Volgograd Oblast&quot;,&quot;Canada&quot;,6,&quot;Boo&quot;),
+  (&quot;219-5829 Orci Rd.&quot;,&quot;Utrecht&quot;,&quot;Indonesia&quot;,3,&quot;Delicias&quot;),
+  (&quot;Ap #585-5555 Egestas. Street&quot;,&quot;Tarapacá&quot;,&quot;Germany&quot;,3,&quot;Huaral&quot;),
+  (&quot;224-3790 Nullam Ave&quot;,&quot;North Gyeongsang&quot;,&quot;Costa Rica&quot;,6,&quot;Carson City&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;Ap #245-3478 Praesent Road&quot;,&quot;FATA&quot;,&quot;Pakistan&quot;,1,&quot;Gijón&quot;),
+  (&quot;Ap #664-9407 Fermentum St.&quot;,&quot;Hessen&quot;,&quot;Turkey&quot;,3,&quot;Guangxi&quot;),
+  (&quot;Ap #183-1660 Dui, Avenue&quot;,&quot;Zhōngnán&quot;,&quot;France&quot;,9,&quot;Thabazimbi&quot;),
+  (&quot;912-1768 In Ave&quot;,&quot;Nuevo León&quot;,&quot;Canada&quot;,2,&quot;Samal&quot;),
+  (&quot;P.O. Box 817, 4088 Accumsan Rd.&quot;,&quot;Hamburg&quot;,&quot;Ukraine&quot;,1,&quot;Temuka&quot;),
+  (&quot;Ap #631-9123 Cursus Rd.&quot;,&quot;Umbria&quot;,&quot;Austria&quot;,4,&quot;Parys&quot;),
+  (&quot;P.O. Box 554, 5534 Vitae, Road&quot;,&quot;La Libertad&quot;,&quot;Netherlands&quot;,4,&quot;Canberra&quot;),
+  (&quot;621-1386 Nisl. Ave&quot;,&quot;Gaziantep&quot;,&quot;Costa Rica&quot;,7,&quot;Suwałki&quot;),
+  (&quot;928-2260 Suspendisse Rd.&quot;,&quot;Atacama&quot;,&quot;Norway&quot;,3,&quot;Fayetteville&quot;),
+  (&quot;Ap #373-8292 Dignissim Rd.&quot;,&quot;Hatay&quot;,&quot;Turkey&quot;,2,&quot;Wellington&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;592-3031 Lorem. Rd.&quot;,&quot;Puntarenas&quot;,&quot;Netherlands&quot;,4,&quot;Ørsta&quot;),
+  (&quot;Ap #878-4363 Nunc St.&quot;,&quot;Munster&quot;,&quot;Indonesia&quot;,10,&quot;Helmond&quot;),
+  (&quot;P.O. Box 527, 3602 Pellentesque St.&quot;,&quot;Xīběi&quot;,&quot;China&quot;,3,&quot;Than Uyên&quot;),
+  (&quot;Ap #401-6941 Sodales Avenue&quot;,&quot;Northern Mindanao&quot;,&quot;Sweden&quot;,7,&quot;Cáceres&quot;),
+  (&quot;993-5092 Parturient St.&quot;,&quot;Newfoundland and Labrador&quot;,&quot;Pakistan&quot;,9,&quot;Mykolaiv&quot;),
+  (&quot;7678 Scelerisque Ave&quot;,&quot;Bryansk Oblast&quot;,&quot;United Kingdom&quot;,2,&quot;Palmerston&quot;),
+  (&quot;Ap #896-9079 Enim St.&quot;,&quot;Nunavut&quot;,&quot;China&quot;,9,&quot;Punggol&quot;),
+  (&quot;130-344 Molestie St.&quot;,&quot;Antwerpen&quot;,&quot;Norway&quot;,8,&quot;Dieppe&quot;),
+  (&quot;253-8375 Odio. Ave&quot;,&quot;Hertfordshire&quot;,&quot;Singapore&quot;,6,&quot;Morelia&quot;),
+  (&quot;537-6365 Dictum Ave&quot;,&quot;Pomorskie&quot;,&quot;India&quot;,7,&quot;Montelíbano&quot;);
+INSERT INTO `direccion` (`calle`,`provincia`,`pais`,`numero`,`ciudad`)
+VALUES
+  (&quot;P.O. Box 581, 2830 Libero. St.&quot;,&quot;Berlin&quot;,&quot;Spain&quot;,4,&quot;Crato&quot;),
+  (&quot;177-5597 Risus. St.&quot;,&quot;Hải Dương&quot;,&quot;Austria&quot;,8,&quot;Okene&quot;),
+  (&quot;1112 Donec St.&quot;,&quot;Maryland&quot;,&quot;Netherlands&quot;,0,&quot;Enkhuizen&quot;),
+  (&quot;485-8480 Amet Street&quot;,&quot;Drenthe&quot;,&quot;Norway&quot;,3,&quot;Port Nolloth&quot;),
+  (&quot;Ap #427-9601 Non, Rd.&quot;,&quot;Free State&quot;,&quot;Indonesia&quot;,10,&quot;Mumbai&quot;),
+  (&quot;117-3406 Ante. Road&quot;,&quot;East Region&quot;,&quot;Poland&quot;,2,&quot;Ramsel&quot;),
+  (&quot;264-6188 Nunc St.&quot;,&quot;South Island&quot;,&quot;Singapore&quot;,2,&quot;Gulfport&quot;),
+  (&quot;Ap #994-187 Turpis. Avenue&quot;,&quot;Queensland&quot;,&quot;India&quot;,8,&quot;Salvador&quot;),
+  (&quot;Ap #508-3597 Nulla Road&quot;,&quot;Magallanes y Antártica Chilena&quot;,&quot;New Zealand&quot;,7,&quot;Tuxtla Gutiérrez&quot;),
+  (&quot;P.O. Box 177, 8052 Vitae Avenue&quot;,&quot;Limburg&quot;,&quot;Colombia&quot;,8,&quot;Emmen&quot;);
 </sql><current_tab id="0"/></tab_sql></sqlb_project>
