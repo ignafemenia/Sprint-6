@@ -1,2 +1,11 @@
 SELECT branch_name, count(branch_id) AS Cantidad_Clientes 
 FROM sucursal GROUP BY branch_name ORDER BY count(branch_id) DESC;
+
+CREATE TRIGGER log_account_after_updaten AFTER UPDATE on cuenta
+WHEN old.balance <> new.balance or
+ old.iban <> new.iban or
+ old.account_type_id <> new.account_type_id
+BEGIN
+    INSERT INTO auditoria_cuenta(old_balance, new_balance)
+	VALUES(old.balance,new.balance);
+END;
