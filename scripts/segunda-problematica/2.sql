@@ -1,4 +1,4 @@
-1_a y 1_b
+1_a y 1_b 
 
 CREATE VIEW customer_with_age
 AS
@@ -22,8 +22,7 @@ SELECT * FROM  customer_with_age where customer_age > 40 order by customer_DNI A
 SELECT * from customer_with_age WHERE customer_name IN ('Tyler', 'Anne') ORDER BY customer_age ASC;
 
 
-
-2
+Parte 2
 
 INSERT INTO cliente
   (customer_name,customer_surname,customer_DNI, branch_id, dob)
@@ -53,7 +52,7 @@ INSERT INTO cliente
 
 
 
-4-
+4- Parte 4
 
 
 INSERT INTO cliente (customer_name,customer_surname,customer_DNI, branch_id, dob) VALUES ('Noel','David','57024950', '82', '1992-05-07');
@@ -66,7 +65,7 @@ DELETE FROM cliente WHERE customer_name='Noel' OR customer_surname = 'David';
 
 
 
-5-
+Parte 5
 
 SELECT MAX(loan_total) FROM prestamo;
 
