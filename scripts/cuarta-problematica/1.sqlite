@@ -1,25 +1,2 @@
-//PUNTO 1
 SELECT branch_name, count(branch_id) AS Cantidad_Clientes 
 FROM sucursal GROUP BY branch_name ORDER BY count(branch_id) DESC;
-
-//PUNTO 5_A
-CREATE TRIGGER log_account_after_updaten AFTER UPDATE on cuenta
-WHEN old.balance <> new.balance or
- old.iban <> new.iban or
- old.account_type_id <> new.account_type_id
-BEGIN
-    INSERT INTO auditoria_cuenta(old_balance, new_balance)
-	VALUES(old.balance,new.balance);
-END;
-
-//PUNTO 7_A
-CREATE TABLE movimientos (
-    transaction_id INT NOT NULL PRIMARY KEY,
-    account_id INT NOT NULL,
-    operation_tipe TEXT NOT NULL,
-    amount INT NOT NULL,
-    changed_at TEXT NOT NULL);
-BEGIN UPDATE cuenta
-SET balance = balance - 1000
-WHERE account_id = 200;
-END;
