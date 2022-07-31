@@ -48,6 +48,12 @@ INSERT INTO cliente
 
 3-
 
+UPDATE cliente SET branch_id='10' WHERE customer_name = 'Lois Stout';
+UPDATE cliente SET branch_id='10' WHERE customer_name = 'Hall Mcconnell';
+UPDATE cliente SET branch_id='10' WHERE customer_name = 'Hitel Mclean';
+UPDATE cliente SET branch_id='10' WHERE customer_name = 'Jin Cooley';
+UPDATE cliente SET branch_id='10' WHERE customer_name = 'Gabriel Harmon';
+
 
 
 
