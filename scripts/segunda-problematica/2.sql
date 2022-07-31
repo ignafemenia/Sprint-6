@@ -1,5 +1,4 @@
-1_a y 1_b 
-
+Parte 1 A y 1 B
 CREATE VIEW customer_with_age
 AS
 SELECT
