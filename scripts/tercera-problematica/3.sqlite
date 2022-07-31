@@ -8,7 +8,7 @@ Parte 3
 SELECT customer_name, customer_surname, dob, branch_id FROM cliente WHERE customer_name like "%Brendan%" 
 
 Parte 4
-
+SELECT * from prestamo WHERE loan_total > 8000000
 
 Parte 5
 SELECT * FROM prestamo WHERE  loan_total > (SELECT avg(loan_total) FROM prestamo)
