@@ -20,6 +20,8 @@ Parte 7
 SELECT * FROM cuenta ORDER by "balance" ASC LIMIT 5
 
 Parte 8
-
+SELECT * FROM prestamo p 
+WHERE strftime('%m', P.loan_date)  IN ('04', '06', '08')
+ORDER BY loan_total
 
 Parte 9
