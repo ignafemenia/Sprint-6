@@ -25,3 +25,8 @@ WHERE strftime('%m', P.loan_date)  IN ('04', '06', '08')
 ORDER BY loan_total
 
 Parte 9
+SELECT 
+ loan_type AS [Type]
+ ,SUM(loan_total) AS [ loan_total_accu]
+FROM prestamo
+GROUP BY 1
