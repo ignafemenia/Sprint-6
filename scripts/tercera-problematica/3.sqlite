@@ -9,6 +9,7 @@ SELECT customer_name, customer_surname, dob, branch_id FROM cliente WHERE custom
 
 Parte 4
 SELECT * from prestamo WHERE loan_total > 8000000
+UNION SELECT * from prestamo where loan_type = "PRENDARIO"
 
 Parte 5
 SELECT * FROM prestamo WHERE  loan_total > (SELECT avg(loan_total) FROM prestamo)
