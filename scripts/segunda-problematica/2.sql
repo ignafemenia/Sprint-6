@@ -23,6 +23,9 @@ SELECT * from customer_with_age WHERE customer_name IN ('Tyler', 'Anne') ORDER B
 
 Parte 2
 
+SELECT * FROM cliente WHERE (customer_name = 'Lois');
+DELETE FROM cliente WHERE (customer_name = 'Lois');
+
 INSERT INTO cliente
   (customer_name,customer_surname,customer_DNI, branch_id, dob)
   VALUES ('Lois','Stout','47730534', '80', '1984-07-07');  
